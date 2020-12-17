@@ -31,11 +31,13 @@ export default function Programmers() {
   const [featuredProgrammer, setFeaturedProgrammer]=useState()
 
   const getNameOfFeatured = () => {
+    setProgrammers(featuredProgrammer)
     // Leave this for last!
     // This is NOT an event handler but a helper function. See its usage inside the JSX.
     // It's going to utilize both slices of state to return the _name_ of the featured dev.
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
+    console.log(getNameOfFeatured);
   };
 
   const style = {
